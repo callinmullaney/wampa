@@ -1,0 +1,21 @@
+{
+  "name": "wampa",
+  "description": "Magento + Foundation + SASS + Gulp",
+  "main": "",
+  "authors": [
+    "Callin Mullaney"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/callinmullaney/wampa",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.3"
+  }
+}

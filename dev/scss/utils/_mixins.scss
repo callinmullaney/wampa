@@ -1,0 +1,260 @@
+////////////////////////////////////////////////////////////////////////////////
+// MIXINS
+// -----------------------------------------------------------------------------
+
+//////////////////
+//typography
+/////////////////
+@mixin header-size($type) {
+  @include breakpoint(medium) {
+    font-size: rem-calc(map-get(map-get($header-sizes, 'medium'), $type) * 1px);
+  }
+
+  font-size: rem-calc(map-get(map-get($header-sizes, 'small'), $type) * 1px);
+}
+
+//////////////////
+//button base styles
+//////////////////
+@mixin button-base {
+  display: inline-block;
+  font-size: rem-calc(13);
+  white-space: nowrap;
+  font-weight: 700;
+  font-family: $body-font-family;
+  line-height: $global-lineheight;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $blue-light;
+  color: $white;
+  border: 1px solid $blue-light;
+  border-radius: $button-radius;
+  padding: ($button-padding * .55) ($button-padding * 1.75);
+  margin: 0;
+  transition: background-color 200ms, border 200ms, color 200ms;
+
+  &:visited,
+  &:active,
+  &:focus {
+    color: $white;
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 15%);
+    border-color: darken($primary-color, 15%);
+    color: $white;
+  }
+}
+
+//////////////////
+//button - 4 style combinations
+@mixin button($outline: false, $reverse: false, $large: false) {
+  @include button-base;
+
+  @if $large == true {
+    font-size: rem-calc(15);
+    padding: ($button-padding * .75) ($button-padding * 2.25);
+  }
+
+  @if $outline == true {
+    background-color: transparent;
+    color: $primary-color;
+
+    &:visited,
+    &:active,
+    &:focus {
+      color: darken($primary-color, 15%);
+    }
+
+    &:hover {
+      background-color: darken($primary-color, 15%);
+      color: darken($primary-color, 15%);
+    }
+  }
+
+  @if $reverse == true {
+    background-color: $white;
+    color: $primary-color;
+    border: 1px solid $white;
+
+    &:visited,
+    &:active,
+    &:focus {
+      color: $primary-color;
+    }
+
+    &:hover {
+      background-color: darken($white, 15%);
+      border-color: darken($white, 15%);
+      color: $primary-color;
+    }
+
+    @if $outline == true {
+      background-color: transparent;
+      color: $white;
+      border: 1px solid rgba($white, .5);
+
+      &:visited,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+
+      &:hover {
+        background-color: $blue-light;
+        border-color: rgba($blue-light, .6);
+        color: $white;
+      }
+    }
+  }
+
+  @content;
+}
+
+//////////////////////
+// Gradient
+//////////////////////
+@mixin linear-gradient($color1, $color2, $direction) {
+  background-color: $color1; /* Old browsers */
+  background: linear-gradient(to $direction, $color1 0%, $color2 100%);
+}
+
+@mixin radial-gradient($center, $edge) {
+  background-color: $edge;
+  background: radial-gradient(ellipse at center, $center 0%, $edge 75%);
+}
+
+//////////////////////
+// overlay psuedo element
+//////////////////////
+@mixin overlay($color, $after: false) {
+
+  @if $after == false {
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color, .66);
+      z-index: 1;
+    }
+  }
+
+  @if $after == true {
+    &::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color, .66);
+      z-index: 1;
+    }
+  }
+}
+
+//////////////////////
+// Content Spacing
+//////////////////////
+@mixin content-margin-gap($side: false) {
+  @include content-margin-gap-top();
+  @include content-margin-gap-bottom();
+
+  @include breakpoint(medium) {
+    @if $side {
+      margin-left: $global-margin / 2;
+      margin-right: $global-margin / 2;
+    }
+  }
+}
+
+@mixin content-margin-gap-top() {
+  margin-top: $global-margin * 3;
+
+  @include breakpoint(medium) {
+    margin-top: $global-margin * 5;
+  }
+}
+
+@mixin content-margin-gap-bottom() {
+  margin-bottom: $global-margin * 3;
+
+  @include breakpoint(medium) {
+    margin-bottom: $global-margin * 5;
+  }
+}
+
+@mixin content-padding-gap($side: false) {
+  padding-top: $global-padding * 3;
+  padding-bottom: $global-padding * 3;
+
+  @include breakpoint(medium) {
+    padding-top: $global-padding * 4;
+    padding-bottom: $global-padding * 4;
+
+    @if $side {
+      padding-left: $global-padding / 2;
+      padding-right: $global-padding / 2;
+    }
+  }
+}
+
+//////////////////////
+// fontawesome icon
+//////////////////////
+@mixin icon($position: before, $icon: false, $icon-set: fa, $styles: true) {
+  @if $position == both {
+    $position: 'before, &:after';
+  }
+  // Either a :before or :after pseudo-element, or both, defaulting to :before
+  &:#{$position} {
+    @if $icon {
+      // A particular icon has been specified
+      content: "#{map-get($icons, $icon)}";
+    }
+    @if $styles {
+      // Supportive icon styles required
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      font-family: $icon-set;
+    }
+    // Include any extra rules supplied for the pseudo-element
+    @content;
+  }
+}
+// f=fontawesome icons
+// e=material
+// icon font codes
+$icons: (
+  facebook: '\f09a',
+  twitter: '\f099',
+  linkedin: '\f0e1',
+  googleplus: '\f0d5',
+  pinterest: '\f231',
+  instagram: '\f16d',
+  search: '\f002',
+  plus: '\e114',
+  close: '\f00d',
+  arrow-left: '\e314',
+  arrow-right: '\e315',
+  pdf: '\f1c1',
+  add-file: '\f093',
+  lock: '\f023',
+  edit: '\f044',
+  delete: '\f1f8',
+  revisions: '\f01e',
+  active: '\f06e',
+  devel: '\f121',
+  menu: '\f039',
+  more: '\f105',
+  tag: '\f02b',
+  folder: '\f07b',
+  file: '\f15b',
+  info: '\f05a',
+);

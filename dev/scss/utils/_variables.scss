@@ -1,0 +1,90 @@
+////////////////////////////////////////////////////////////////////////////////
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+// Global
+$global-width: rem-calc(1024);
+$grid-row-width: rem-calc(1024);
+$global-radius: 4px;
+$global-lineheight: 1.66;
+$grid-column-gutter: (
+  small: 40px,
+  medium: 60px,
+);
+$column-gutter: rem-calc(30);
+
+// Global Colors
+$white: #fff;
+$black: rgba(20, 20, 20, 1);
+$grey: rgba(115, 115, 115, 1);
+$grey-dark: rgba(50, 50, 50, 1);
+$grey-light: rgba(240, 240, 240, 1);
+$green: rgba(178, 202, 150, 1);
+$red: rgba(243, 83, 84, 1);
+$blue: rgba(30, 52, 101, 1);
+
+// Theme Colors
+$primary-color: $blue;
+$secondary-color: $green;
+$body-background: $white;
+
+//social media colors
+$facebook: rgba(70, 101, 172, 1);
+$twitter: rgba(5, 159, 245, 1);
+$linkedin: rgba(0, 118, 183, 1);
+$googleplus: rgba(211, 72, 54, 1);
+
+$foundation-palette: (
+ primary: #2199e8,
+ secondary: #777,
+ success: #5da423,
+ warning: #e3b000,
+ alert: #c60f13,
+);
+
+// Typography
+$body-font-color: lighten($black, 20%);
+$header-font-family: "adelle", serif;
+$body-font-family: "proxima-nova", sans-serif;
+$heading-color: $grey-dark;
+$heading-color-alt: $grey-light;
+$header-sizes: (
+  small: (
+    'h1': 28,
+    'h2': 21,
+    'h3': 19,
+    'h4': 17,
+    'h5': 16,
+    'h6': 15,
+  ),
+  medium: (
+    'h1': 44,
+    'h2': 34,
+    'h3': 30,
+    'h4': 22,
+    'h5': 22,
+    'h6': 17,
+  ),
+  large: (
+    'h1': 47,
+    'h2': 34,
+    'h3': 30,
+    'h4': 22,
+    'h5': 22,
+    'h6': 17,
+  ),
+);
+
+// Buttons
+$button-padding: 1rem;
+$button-color-alt: $white;
+$button-radius: 4px;
+
+// Forms
+$input-transition: box-shadow 300ms, border-color 300ms ease-in-out;
+$input-radius: 0;
+$input-padding: 1em;
+$input-border: 0;
+$input-border-focus: 0;
+$input-shadow: none;
+$input-shadow-focus: 0 2px 5px rgba($grey-light, .33);
