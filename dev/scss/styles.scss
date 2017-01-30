@@ -5,6 +5,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Vendor
 // -----------------------------------------------------------------------------
+// Here we load vendor utilities. Bourbon and Foundation 6 are core. You can
+// selectively load foundation components but by default everything is loaded.
+// We load our variables and custom foundation (found in utils/) before we
+// load in the Foundation componenets so we can override them.
 
 @import 'foundation';
 @import 'utils/breakpoints';
@@ -15,5 +19,29 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Utilities
 // -----------------------------------------------------------------------------
+// The utils/ folder gathers all Sass tools and helpers we’ll use across the
+// project. Got a function? A mixin? Put it in there.
 
 @import 'utils/mixins';
+
+
+////////////////////////////////////////////////////////////////////////////////
+// LAYOUT
+// -----------------------------------------------------------------------------
+// The layout/ directory usually contains a number of files, each of them
+// setting some styles for the main sections of the layout (header, footer, and
+// so on). It also contains the _grid file which is the grid system used to
+// build the layout.
+
+@import 'layout/header';
+@import 'layout/copyright';
+
+
+////////////////////////////////////////////////////////////////////////////////
+// COMPONENT
+// -----------------------------------------------------------------------------
+// For smaller components, there is the components/ folder. While layout/ is
+// kind of macro (defining the global wireframe), components/ is more micro. It
+// can contain all kinds of specific modules like a slider, a loader, a widget,
+// or anything along those lines. There are usually a lot of files in
+// components/ since your site should be mostly composed of tiny modules.

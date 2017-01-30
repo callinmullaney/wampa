@@ -9,7 +9,7 @@
     <head>
         <css src="css/styles.css"/>
 
-        <remove src="css/styles-m.css" />
-        <remove src="css/styles-l.css" />
+        <!-- <remove src="css/styles-m.css" />
+        <remove src="css/styles-l.css" /> -->
     </head>
 </page>
