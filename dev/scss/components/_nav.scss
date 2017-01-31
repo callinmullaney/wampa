@@ -1,0 +1,66 @@
+// Slideout nav
+
+//Nav toggle button
+.nav-toggle {
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+
+  &::before {
+    font-size: $global-font-size * 2;
+    line-height: inherit;
+    color: $grey;
+    content: '\e609';
+    font-family: 'luma-icons';
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  > span {
+    font-size: 0;
+  }
+}
+
+.nav-sections-item-title {
+  display: none;
+}
+
+.nav-sections-item-content {
+
+  > *,
+  &:not(.open) {
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+
+  ul {
+
+    &.open {
+      list-style: none;
+      margin-left: 0;
+
+      li {
+        width: 100%;
+        display: block;
+        background-color: $grey-light;
+        padding: $global-padding;
+        border-bottom: 1px solid $grey;
+
+        a {
+          display: block;
+        }
+      }
+    }
+
+    &:not(.open) {
+      display: none;
+    }
+  }
+}

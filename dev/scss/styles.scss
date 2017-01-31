@@ -49,4 +49,7 @@
 // or anything along those lines. There are usually a lot of files in
 // components/ since your site should be mostly composed of tiny modules.
 
+@import 'components/nav';
 @import 'components/buttons';
+@import 'components/minicart';
+@import 'components/block_search';

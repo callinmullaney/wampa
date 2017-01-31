@@ -4,15 +4,19 @@ footer {
   @include grid-column(12);
   background-color: rgba($grey, 0.1);
   padding: $global-padding;
+  margin-top: $global-margin * 2;
 
   .footer.content {
 
-    padding: 0 ($global-padding * 4);
+    @include breakpoint(medium) {
+      padding: 0 ($global-padding * 4);
+    }
   }
 
   .block.newsletter {
 
     @include grid-column(12);
+    margin-bottom: $global-margin * 2;
 
     @include breakpoint(medium) {
       @include grid-column(5);
@@ -22,12 +26,25 @@ footer {
 
   .footer.links {
     display: inline-block;
+    margin-left: 0;
     vertical-align: top;
+
+    @include breakpoint(small only) {
+      width: 100%;
+    }
 
     li {
       font-size: $global-font-size;
       margin: 0 0 8px;
-      padding: 0;
+
+      @include breakpoint (small only) {
+        padding: $global-padding;
+        background-color: darken($grey-light, 5%);
+      }
+
+      a {
+        display: block;
+      }
     }
   }
 }
