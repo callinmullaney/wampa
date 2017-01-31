@@ -1,4 +1,26 @@
 //Minicart in header
 .minicart-wrapper {
   float: right;
+
+  a {
+
+    &::before {
+      font-size: 22px;
+      line-height: 28px;
+      color: $grey;
+      content: '\e611';
+      font-family: 'luma-icons';
+      margin: 0;
+      vertical-align: top;
+      display: inline-block;
+      font-weight: normal;
+      overflow: hidden;
+      speak: none;
+      text-align: center;
+    }
+
+    > span {
+      font-size: 0;
+    }
+  }
 }

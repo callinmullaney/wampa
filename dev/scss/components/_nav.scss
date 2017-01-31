@@ -45,6 +45,8 @@
     &.open {
       list-style: none;
       margin-left: 0;
+      position: relative;
+      z-index: 10;
 
       li {
         width: 100%;

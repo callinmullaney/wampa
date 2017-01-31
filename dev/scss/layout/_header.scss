@@ -7,7 +7,10 @@
     margin-top: 0;
 
     .panel.wrapper {
-      border-bottom: 1px solid $grey-light;
+
+      @include breakpoint(medium) {
+        border-bottom: 1px solid $grey-light;
+      }
     }
 
     &::after {
