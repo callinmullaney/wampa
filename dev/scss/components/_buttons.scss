@@ -1,0 +1,6 @@
+// Buttons
+button,
+[type=submit],
+[type=button] {
+  @include button;
+}

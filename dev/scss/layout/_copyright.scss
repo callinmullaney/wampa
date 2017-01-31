@@ -1,4 +1,7 @@
-.copyright {
+.copyright,
+.bugs {
+  background-color: rgba($grey, 0.1);
+  clear: both;
   display: block;
   padding: $global-padding;
   text-align: center;

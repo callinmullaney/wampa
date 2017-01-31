@@ -1,0 +1,31 @@
+// Page columns
+
+.page-main {
+
+  @include grid-column(12);
+
+  .column {
+
+    .main {
+
+      @include grid-column(12);
+
+      @include breakpoint(medium) {
+        @include grid-column(8);
+      }
+    }
+
+    .sidebar {
+
+      @include grid-column(12);
+
+      @include breakpoint(medium) {
+        @include grid-column(4);
+      }
+    }
+  }
+
+  &::after {
+    clear: both;
+  }
+}

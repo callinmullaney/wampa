@@ -1,6 +1,47 @@
+// Page Headers
+
 .page-wrapper {
 
   .page-header {
+
     margin-top: 0;
+
+    .panel.wrapper {
+      border-bottom: 1px solid $grey-light;
+    }
+
+    &::after {
+      clear: both;
+    }
+
+    .header.content {
+
+      padding-left: $global-padding;
+      padding-right: $global-padding;
+      padding-top: $global-padding * 2;
+    }
+}
+
+  .header.panel {
+
+    padding: $global-padding;
+
+    > .header.links {
+      float: right;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-left: $global-margin;
+      }
+    }
+  }
+
+  .action.skip:not(:focus) {
+
+    font-size: 0;
+    line-height: 0;
   }
 }
