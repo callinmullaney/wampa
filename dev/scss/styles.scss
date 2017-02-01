@@ -13,8 +13,8 @@
 @import 'foundation';
 @import 'utils/breakpoints';
 @import 'utils/variables';
-@include foundation-everything;
-
+@import 'base/foundation_components';
+// @include foundation-everything;
 
 ////////////////////////////////////////////////////////////////////////////////
 // Utilities
