@@ -4,6 +4,11 @@
 
   @include grid-column(12);
 
+  .page-title {
+
+    @include grid-column(12);
+  }
+
   .column {
 
     .main {
