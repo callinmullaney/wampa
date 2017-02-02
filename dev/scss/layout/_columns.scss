@@ -1,36 +1,67 @@
 // Page columns
 
-.page-main {
+// 2 column layouts
+.page-layout-2columns-left,
+.page-layout-2columns-right {
 
-  @include grid-column(12);
-
-  .page-title {
+  .page-main {
 
     @include grid-column(12);
-  }
 
-  .column {
-
-    .main {
+    .page-title {
 
       @include grid-column(12);
+    }
 
-      @include breakpoint(medium) {
-        @include grid-column(8);
+    .column {
+
+      .main {
+
+        @include grid-column(12);
+
+        @include breakpoint(medium) {
+          @include grid-column(8);
+        }
+      }
+
+      .sidebar {
+
+        @include grid-column(12);
+
+        @include breakpoint(medium) {
+          @include grid-column(4);
+        }
       }
     }
 
-    .sidebar {
-
-      @include grid-column(12);
-
-      @include breakpoint(medium) {
-        @include grid-column(4);
-      }
+    &::after {
+      clear: both;
     }
   }
+}
 
-  &::after {
-    clear: both;
+// 1 column
+.page-layout-1column {
+
+  .page-main {
+
+    @include grid-column(12);
+
+    .page-title {
+
+      @include grid-column(12);
+    }
+
+    .column {
+
+      .main {
+
+        @include grid-column(12);
+      }
+    }
+
+    &::after {
+      clear: both;
+    }
   }
 }

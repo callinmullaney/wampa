@@ -1,22 +1,49 @@
 //Default form styling
-.form {
-
-  input,
-  input:focus,
-  textarea,
-  textarea:focus,
-  select {
-    background-color: $grey-light;
-    border: 1px solid darken($grey-light, 5%);
-    border-radius: $global-radius;
-    color: $grey;
-    line-height: $global-padding;
+[type=text],
+[type=text]:focus,
+[type=password],
+[type=password]:focus,
+[type=date],
+[type=date]:focus,
+[type=datetime],
+[type=datetime]:focus,
+[type=datetime-local],
+[type=datetime-local]:focus,
+[type=month],
+[type=month]:focus,
+[type=week],
+[type=week]:focus,
+[type=email],
+[type=email]:focus,
+[type=number],
+[type=number]:focus,
+[type=search],
+[type=search]:focus,
+[type=tel],
+[type=tel]:focus,
+[type=time],
+[type=time]:focus,
+[type=url],
+[type=url]:focus,
+[type=color],
+[type=color]:focus,
+input,
+input:focus,
+textarea,
+textarea:focus,
+select {
+  background-color: $grey-light;
+  border: 1px solid darken($grey-light, 5%);
+  border-radius: $global-radius;
+  color: $grey;
+  line-height: $global-padding;
   }
 
-  .label {
+label {
+
+  &.label {
     color: darken($grey, 10%);
     background-color: transparent;
     padding-left: 0;
   }
-
 }
