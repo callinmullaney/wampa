@@ -7,20 +7,12 @@
     display: none;
   }
 
-  &::before {
+  @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-menu) {
     font-size: $global-font-size * 2;
     line-height: inherit;
     color: $grey;
-    content: '\e609';
-    font-family: 'luma-icons';
-    vertical-align: middle;
-    display: inline-block;
-    font-weight: normal;
-    overflow: hidden;
-    speak: none;
-    text-align: center;
     cursor: pointer;
-  }
+  };
 
   > span {
     font-size: 0;
