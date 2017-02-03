@@ -15,5 +15,8 @@
             </arguments>
         </referenceBlock>
         <move element="copyright" destination="before.body.end"/>
+        <move element="product.info.details" destination="product.info.main"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+
     </body>
 </page>

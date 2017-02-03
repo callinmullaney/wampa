@@ -1,0 +1,17 @@
+//Individual product view page
+.product-info-main {
+
+  @include breakpoint(medium) {
+    @include grid-column(4);
+    float: right;
+  }
+
+  .product-add-form {
+
+    label {
+
+      color: $grey;
+      padding-left: 0;
+    }
+  }
+}

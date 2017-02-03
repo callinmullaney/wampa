@@ -22,6 +22,7 @@ $grey-light: rgba(240, 240, 240, 1);
 $green: rgba(178, 202, 150, 1);
 $red: rgba(243, 83, 84, 1);
 $blue: rgba(30, 52, 101, 1);
+$blue-light: rgba(20, 117, 188, 1);
 
 // Theme Colors
 $primary-color: $blue;
@@ -87,4 +88,4 @@ $input-padding: 1em;
 $input-border: 0;
 $input-border-focus: 0;
 $input-shadow: none;
-$input-shadow-focus: 0 2px 5px rgba($grey-light, .33);
+$input-shadow-focus: 0 2px 5px rgba($grey-light, 0.33);

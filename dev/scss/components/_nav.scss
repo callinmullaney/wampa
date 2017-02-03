@@ -1,0 +1,60 @@
+// Slideout nav
+
+//Nav toggle button
+.nav-toggle {
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+
+  @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-menu) {
+    font-size: $global-font-size * 2;
+    line-height: inherit;
+    color: $grey;
+    cursor: pointer;
+  };
+
+  > span {
+    font-size: 0;
+  }
+}
+
+.nav-sections-item-title {
+  display: none;
+}
+
+.nav-sections-item-content {
+
+  > *,
+  &:not(.open) {
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+
+  ul {
+
+    &.open {
+      list-style: none;
+      margin-left: 0;
+      position: relative;
+      z-index: 10;
+
+      li {
+        width: 100%;
+        display: block;
+        background-color: $grey-light;
+        padding: $global-padding;
+        border-bottom: 1px solid $grey;
+      }
+
+      a {
+        display: block;
+      }
+    }
+
+    &:not(.open) {
+      display: none;
+    }
+  }
+}

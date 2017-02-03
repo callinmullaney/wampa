@@ -42,5 +42,5 @@
     "bower": "~1.7",
     "gulp-install": "~0.6"
   },
-  "sasslintConfig": ".sass-lint.yml"
+  "sasslintConfig": ".scss-lint.yml"
 }

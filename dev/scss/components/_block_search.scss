@@ -1,0 +1,17 @@
+//Block Search from Header
+.block-search {
+  float: right;
+  padding-left: 15px;
+  position: relative;
+  width: 250px;
+  z-index: 4;
+
+  .block-title {
+    font-size: 0;
+  }
+
+  input {
+    border: 1px solid darken($grey, 5%);
+    border-radius: $global-radius;
+  }
+}

@@ -1,0 +1,17 @@
+//Breadcrumbs
+.breadcrumbs {
+
+  @include grid-column(12);
+
+  ul {
+
+    list-style: none;
+
+    li {
+      font-size: $global-font-size;
+      text-transform: none;
+      display: inline-block;
+      padding: 0 ($global-padding / 2);
+    }
+  }
+}

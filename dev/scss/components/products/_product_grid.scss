@@ -1,0 +1,22 @@
+//Product Grid
+.products-grid {
+
+  ol {
+
+    list-style: none;
+
+    li {
+
+      @include grid-column(12);
+      text-align: center;
+
+      @include breakpoint(medium) {
+        @include grid-column(3);
+      }
+
+      &:last-child:not(:first-child) {
+        float: left;
+      }
+    }
+  }
+}
