@@ -1,0 +1,39 @@
+//Shopping cart
+.cart-container {
+
+  [aria-selected="false"] {
+
+    @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-menu) {
+      margin: $global-margin;
+      vertical-align: top;
+    };
+  }
+
+  [aria-selected="true"] {
+
+    @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-remove) {
+      margin: $global-margin;
+      vertical-align: top;
+    };
+  }
+
+  [aria-selected="false"],
+  [aria-selected="true"] {
+
+    &:hover {
+
+      color: $grey;
+    }
+  }
+
+  ul {
+
+    list-style: none;
+    margin-top: $global-margin;
+  }
+
+  .continue {
+
+    @include button;
+  }
+}
