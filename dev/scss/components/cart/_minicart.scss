@@ -29,7 +29,6 @@
 
     //removes default My Cart text
     > span {
-      font-size: 0;
       display: none;
     }
   }
@@ -60,5 +59,10 @@
     .secondary {
       display: inline;
     }
+  }
+
+  ol {
+
+    list-style: none;
   }
 }
