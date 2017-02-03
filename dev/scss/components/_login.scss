@@ -1,0 +1,13 @@
+//Customer Login
+.login-container {
+
+  > div {
+
+    @include grid-column(12);
+
+    @include breakpoint(medium) {
+      @include grid-column(6);
+    }
+  }
+
+}
