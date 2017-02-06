@@ -3,7 +3,7 @@
 
   [aria-selected="false"] {
 
-    @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-menu) {
+    @include icon($position: before, $icon-set: 'fa', $icon: menu) {
       margin: $global-margin;
       vertical-align: top;
     };
@@ -11,7 +11,7 @@
 
   [aria-selected="true"] {
 
-    @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-remove) {
+    @include icon($position: before, $icon-set: 'fa', $icon: close) {
       margin: $global-margin;
       vertical-align: top;
     };

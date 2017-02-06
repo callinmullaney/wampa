@@ -1,4 +1,4 @@
-//Shopping Cart actions - edit and remove buttons and links.
+//Action Icons - Edit or remove actions using icons in place of text links.
 
 //Edit and Remove Item buttons/links turned to icons.
 // -delete and -edit are from main cart with .delete and .edit from minicart
@@ -25,7 +25,7 @@
 .action.edit,
 .action-edit {
 
-  @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-edit) {
+  @include icon($position: before, $icon-set: 'fa', $icon: edit) {
     display: inline-block;
   };
 }
@@ -34,7 +34,7 @@
 .action.delete,
 .action-delete {
 
-  @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-delete) {
+  @include icon($position: before, $icon-set: 'fa', $icon: delete) {
     display: inline-block;
   };
 }

@@ -20,7 +20,7 @@
   //Open cart/shopping cart button
   .showcart {
 
-    @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-shopping-cart) {
+    @include icon($position: before, $icon-set: 'fa', $icon: shopping-basket) {
       display: inline-block;
       font-size: $global-font-size * 2;
       line-height: 1;
@@ -38,7 +38,7 @@
 
     &.close {
 
-      @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-remove) {
+      @include icon($position: before, $icon-set: 'fa', $icon: close) {
         vertical-align: top;
         position: absolute;
         top: $global-padding;

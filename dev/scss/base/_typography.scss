@@ -4,8 +4,23 @@ body {
   font-size: 14px;
 }
 
+// @font-face {
+//   font-family: 'luma-icons';
+//   src: url('../fonts/luma/fonts/Luma-Icons.eot');
+//   src: url('../fonts/luma/fonts/Luma-Icons.eot?#iefix') format('embedded-opentype'),
+//     url('../fonts/luma/fonts/Luma-Icons.woff2') format('woff2'),
+//     url('../fonts/luma/fonts/Luma-Icons.woff') format('woff'),
+//     url('../fonts/luma/fonts/Luma-Icons.ttf') format('truetype'),
+//     url('../fonts/luma/fonts/Luma-Icons.svg') format('svg');
+// }
+
 @font-face {
-  font-family: 'luma-icons';
-  src: url('../fonts/Luma-Icons.eot');
-  src: url('../fonts/Luma-Icons.eot?#iefix') format('embedded-opentype'), url('../fonts/Luma-Icons.woff2') format('woff2'), url('../fonts/Luma-Icons.woff') format('woff'), url('../fonts/Luma-Icons.ttf') format('truetype'), url('../fonts/Luma-Icons.svg') format('svg');
+  font-family: 'fa';
+  src: url('../fonts/fa/fonts/fa.eot');
+  src: url('fonts/fa.eot') format('embedded-opentype'),
+    url('../fonts/fa/fonts/fa.ttf') format('truetype'),
+    url('../fonts/fa/fonts/fa.woff') format('woff'),
+    url('../fonts/fa/fonts/fa.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
