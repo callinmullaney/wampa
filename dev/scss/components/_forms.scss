@@ -41,6 +41,17 @@ select {
   height: $global-padding * 3;
 }
 
+[type=checkbox],
+[type=radio],
+.field [type=checkbox],
+.field [type=radio] {
+
+  display: inline;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
 label {
 
   &.label {

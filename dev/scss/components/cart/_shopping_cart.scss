@@ -36,4 +36,17 @@
 
     @include button;
   }
+
+  //Gift message settings - closed by default and clicking "Gift Options" link opens Gift form with class _active.
+  .gift-content {
+
+    visibility: hidden;
+    height: 0;
+
+    &._active {
+
+      visibility: visible;
+      height: auto;
+    }
+  }
 }
