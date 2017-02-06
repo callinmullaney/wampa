@@ -22,6 +22,11 @@
       padding-left: $global-padding;
       padding-right: $global-padding;
       padding-top: $global-padding * 2;
+
+      .logo {
+
+        padding-left: $global-padding;
+      }
     }
 }
 

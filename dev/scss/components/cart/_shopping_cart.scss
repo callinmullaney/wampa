@@ -49,4 +49,14 @@
       height: auto;
     }
   }
+
+  table {
+
+    .label {
+
+      color: $black;
+      font-size: $global-font-size;
+      padding-left: 0;
+    }
+  }
 }

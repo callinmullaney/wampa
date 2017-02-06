@@ -42,3 +42,11 @@
     };
   }
 }
+
+//Add printer icon for "Print This Page" link
+.action.print {
+
+  @include icon($position: before, $icon-set: 'fa', $icon: print) {
+    display: inline-block;
+  };
+}

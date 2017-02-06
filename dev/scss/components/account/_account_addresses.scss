@@ -25,4 +25,9 @@
       }
     }
   }
+
+  [class*="address"] {
+
+    margin-bottom: $global-margin;
+  }
 }

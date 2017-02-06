@@ -1,17 +1,36 @@
 //Individual product view page
-.product-info-main {
+.catalog-product-view {
 
-  @include breakpoint(medium) {
-    @include grid-column(4);
-    float: right;
+  .product-info-main {
+
+    @include breakpoint(medium) {
+      @include grid-column(4);
+      float: right;
+    }
+
+    .product-add-form {
+
+      label {
+
+        color: $grey;
+        padding-left: 0;
+      }
+    }
   }
 
-  .product-add-form {
+  // Add customer review of product
+  .review-add {
 
-    label {
+    legend {
 
-      color: $grey;
-      padding-left: 0;
+      display: block;
+      text-align: center;
+
+      > span,
+      > strong {
+
+        display: block;
+      }
     }
   }
 }
