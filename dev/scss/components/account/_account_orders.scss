@@ -11,19 +11,12 @@
   }
 
   // Remove second instance of "Order Items" - on top of order table as a link set
+  // Remove third instance of "Order Items" - inside order table as a caption
+  .table-order-items caption,
   .order-links {
+
     font-size: 0;
     visibility: hidden;
-  }
-
-  // Remove third instance of "Order Items" - inside order table as a caption
-  .table-order-items {
-
-    caption {
-
-      font-size: 0;
-      visibility: hidden;
-    }
   }
 
   .order-date {
