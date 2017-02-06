@@ -8,6 +8,12 @@ button,
 //Add button styles to secondary links to match buttons of primary links.
 .actions-toolbar {
 
+  .primary,
+  .secondary {
+
+    display: inline-block;
+  }
+
   .secondary {
 
     a {
