@@ -1,0 +1,51 @@
+//Customer Account Orders View Page
+.sales-order-view {
+
+  .order-items {
+
+    ul {
+
+      list-style: none;
+      margin-left: 0;
+    }
+  }
+
+  // Remove second instance of "Order Items" - on top of order table as a link set
+  .order-links {
+    font-size: 0;
+    visibility: hidden;
+  }
+
+  // Remove third instance of "Order Items" - inside order table as a caption
+  .table-order-items {
+
+    caption {
+
+      font-size: 0;
+      visibility: hidden;
+    }
+  }
+
+  .order-date {
+
+    .label {
+
+      color: $grey;
+      background-color: transparent;
+      padding-left: 0;
+    }
+  }
+
+  .order-actions-toolbar {
+
+    .actions {
+
+      margin: $global-margin 0;
+
+      a {
+
+        @include button;
+      }
+    }
+  }
+}

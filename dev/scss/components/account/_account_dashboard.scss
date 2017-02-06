@@ -1,0 +1,13 @@
+//Customer Account Dashboard
+.customer-account-index {
+
+  [class*="block-dashboard"] {
+
+    .block-title {
+
+      background-color: $grey-light;
+      margin: $global-margin 0;
+      padding: $global-padding 0;
+    }
+  }
+}

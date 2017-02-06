@@ -4,3 +4,17 @@ button,
 [type=button] {
   @include button;
 }
+
+
+//Add button styles to secondary links to match buttons of primary links.
+.actions-toolbar {
+
+  .secondary {
+
+    a {
+
+      @include button;
+      margin: $global-margin 0;
+    }
+  }
+}
