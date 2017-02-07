@@ -1,0 +1,16 @@
+//Site alert messages
+.page.messages {
+  padding: $global-padding;
+  color: $black;
+  clear: both;
+
+  .success {
+    background-color: map-get($foundation-palette, success);
+    padding: $global-padding;
+  }
+
+  .error {
+    background-color: map-get($foundation-palette, alert);
+    padding: $global-padding;
+  }
+}
