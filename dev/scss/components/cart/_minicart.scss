@@ -2,18 +2,34 @@
 .minicart-wrapper {
   float: right;
   position: relative;
+  margin-left: $global-margin * 2;
+  top: $global-margin * 2;
 
   &.active {
 
-    background-color: $grey-light;
-    color: $grey;
-    padding: $global-padding;
-    margin-left: $global-margin;
+    // background-color: $grey-light;
+    // color: $grey;
+    // padding: $global-padding;
+    // margin-left: $global-margin;
 
     .label {
       color: darken($grey, 10%);
       background-color: transparent;
       padding-left: 0;
+    }
+
+    .block-minicart {
+
+      display: block;
+      background-color: $grey-light;
+      color: $grey;
+      padding: $global-padding;
+      margin-left: $global-margin;
+      position: absolute;
+      right: $global-padding;
+      top: $global-padding * 4;
+      width: $global-padding * 20;
+      z-index: 6;
     }
   }
 

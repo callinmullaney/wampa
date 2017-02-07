@@ -5,7 +5,7 @@ button,
   @include button;
 }
 
-//Add button styles to secondary links to match buttons of primary links.
+//Toolbar links to display inline-block
 .actions-toolbar {
 
   .primary,
@@ -13,7 +13,7 @@ button,
 
     display: inline-block;
   }
-
+  //Add button styles to secondary links to match buttons of primary links.
   .secondary {
 
     a {
