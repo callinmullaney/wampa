@@ -1,19 +1,6 @@
 //Checkout Process Page
 .page-layout-checkout {
 
-  &._has-modal-custom {
-
-    .modal-custom {
-
-      display: block;
-    }
-  }
-
-  .modal-custom {
-
-    display: none;
-  }
-
   .step-title {
 
     font-weight: 800;
@@ -26,10 +13,17 @@
 
       @include grid-column(12);
       margin: $global-margin 0;
+      padding: $global-padding;
 
       @include breakpoint(medium) {
 
         @include grid-column(6);
+      }
+
+      &.selected-item {
+
+        background-color: $grey-light;
+        border-radius: $global-radius;
       }
     }
   }

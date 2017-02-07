@@ -1,12 +1,44 @@
 //Modals
-.modals-wrapper {
+//Modals closed by default
+.modals-wrapper,
+.modal-custom {
   display: none;
+}
+
+//Custom modal overlay - used on checkout pages
+body {
+
+  &._has-modal-custom {
+
+    .modal-custom {
+
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba($black, 0.6);
+      backdrop-filter: blur(4px) grayscale(100%);
+
+      .modal-inner-wrap {
+
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: $global-padding * 12;
+
+        @include breakpoint(medium) {
+
+          width: 50%;
+        }
+      }
+    }
+  }
 }
 
 //Modal content when open
 .modal-inner-wrap {
-
-  margin-bottom: $global-margin;
 
   .modal-header {
 
