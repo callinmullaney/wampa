@@ -19,6 +19,12 @@
 //Autocomplete search results
 .searchautocomplete__autocomplete {
 
+  position: absolute;
+  background-color: $grey-light;
+  border: 1px solid $grey;
+  border-radius: $global-radius;
+  margin-top: $global-margin;
+
   ul {
     list-style: none;
 
@@ -30,5 +36,24 @@
         margin: 0 auto;
       }
     }
+  }
+
+  .show-all-results,
+  .index-title {
+
+    text-align: center;
+    background-color: $white;
+    border-radius: $global-radius;
+    padding: $global-padding;
+
+    a {
+
+      display: block;
+    }
+  }
+
+  .index-title {
+
+    margin-bottom: $global-margin;
   }
 }

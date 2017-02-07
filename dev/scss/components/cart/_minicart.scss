@@ -7,11 +7,6 @@
 
   &.active {
 
-    // background-color: $grey-light;
-    // color: $grey;
-    // padding: $global-padding;
-    // margin-left: $global-margin;
-
     .label {
       color: darken($grey, 10%);
       background-color: transparent;
@@ -22,6 +17,8 @@
 
       display: block;
       background-color: $grey-light;
+      border: 1px solid $grey;
+      border-radius: $global-radius;
       color: $grey;
       padding: $global-padding;
       margin-left: $global-margin;
