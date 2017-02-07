@@ -1,0 +1,36 @@
+//Checkout Process Page
+.page-layout-checkout {
+
+  &._has-modal-custom {
+
+    .modal-custom {
+
+      display: block;
+    }
+  }
+
+  .modal-custom {
+
+    display: none;
+  }
+
+  .step-title {
+
+    font-weight: 800;
+    margin: $global-margin 0;
+  }
+
+  .shipping-address-items {
+
+    div {
+
+      @include grid-column(12);
+      margin: $global-margin 0;
+
+      @include breakpoint(medium) {
+
+        @include grid-column(6);
+      }
+    }
+  }
+}

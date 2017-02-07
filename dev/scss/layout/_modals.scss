@@ -1,4 +1,36 @@
-.modals-wrapper,
-.modal-custom {
+//Modals
+.modals-wrapper {
   display: none;
+}
+
+//Modal content when open
+.modal-inner-wrap {
+
+  margin-bottom: $global-margin;
+
+  .modal-header {
+
+    border-bottom: 0;
+  }
+
+  .modal-content {
+
+    box-shadow: none;
+    padding: $global-padding;
+
+    .title {
+
+      background-color: $grey-light;
+      display: block;
+      padding: $global-padding;
+      margin-bottom: $global-margin;
+    }
+
+    .label {
+
+      color: $grey;
+      background-color: transparent;
+      padding-left: 0;
+    }
+  }
 }

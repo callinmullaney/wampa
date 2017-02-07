@@ -16,7 +16,7 @@
   }
 }
 
-//Autocomplete search results
+//Autocomplete search results - set to drop over page content not push page content down
 .searchautocomplete__autocomplete {
 
   position: absolute;
@@ -24,6 +24,7 @@
   border: 1px solid $grey;
   border-radius: $global-radius;
   margin-top: $global-margin;
+  display: none;
 
   ul {
     list-style: none;
@@ -38,6 +39,13 @@
     }
   }
 
+  //Search results autocomplete hidden by default and shown when active and class "_active" is added
+  &._active {
+
+    display: block;
+  }
+
+//Show all and Search Title centered with background-color and padding to break up list
   .show-all-results,
   .index-title {
 
