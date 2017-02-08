@@ -7,10 +7,18 @@
   .success {
     background-color: map-get($foundation-palette, success);
     padding: $global-padding;
+    border-radius: $global-radius;
   }
 
   .error {
     background-color: map-get($foundation-palette, alert);
     padding: $global-padding;
+    border-radius: $global-radius;
+  }
+
+  .alert {
+    background: map-get($foundation-palette, warning);
+    padding: $global-padding;
+    border-radius: $global-radius;
   }
 }

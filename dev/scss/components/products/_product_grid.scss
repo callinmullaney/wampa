@@ -1,9 +1,12 @@
 //Product Grid
 .products-grid {
 
+  box-sizing: border-box;
+
   ol {
 
     list-style: none;
+    margin-left: 0;
 
     li {
 
@@ -12,6 +15,10 @@
 
       @include breakpoint(medium) {
         @include grid-column(3);
+      }
+
+      &:first-child {
+        padding-left: 0;
       }
 
       &:last-child:not(:first-child) {

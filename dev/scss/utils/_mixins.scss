@@ -17,8 +17,9 @@
 //button base styles
 //////////////////
 @mixin button-base {
+  cursor: pointer;
   display: inline-block;
-  font-size: rem-calc(13);
+  font-size: rem-calc(10);
   white-space: nowrap;
   font-weight: 700;
   font-family: $body-font-family;
