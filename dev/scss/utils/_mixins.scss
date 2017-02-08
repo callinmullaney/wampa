@@ -19,7 +19,7 @@
 @mixin button-base {
   cursor: pointer;
   display: inline-block;
-  font-size: rem-calc(10);
+  font-size: rem-calc(8);
   white-space: nowrap;
   font-weight: 700;
   font-family: $body-font-family;
@@ -32,6 +32,7 @@
   border-radius: $button-radius;
   padding: ($button-padding * 0.55) ($button-padding * 1.75);
   margin: 0;
+  margin-bottom: $global-margin / 2;
   transition: background-color 200ms, border 200ms, color 200ms;
 
   &:visited,

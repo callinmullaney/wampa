@@ -48,7 +48,7 @@
   }
 
   //Close button
-  button {
+  .action.close {
 
     width: 0;
     height: 0;
@@ -60,27 +60,19 @@
     float: right;
     outline: none;
 
-    &:hover {
+    @include icon($position: before, $icon-set: 'fa', $icon: close) {
+      vertical-align: top;
+      position: absolute;
+      top: 0;
+      right: $global-padding;
+      font-size: $global-font-size * 2.5;
+      color: $grey;
+    };
 
-      background-color: transparent;
-    }
+    //removes default CLOSE text
+    > span:first-child {
 
-    &.close {
-
-      @include icon($position: before, $icon-set: 'fa', $icon: close) {
-        vertical-align: top;
-        position: absolute;
-        top: 0;
-        right: $global-padding;
-        font-size: $global-font-size * 1.5;
-        color: $grey;
-      };
-
-      //removes default CLOSE text
-      > span:first-child {
-
-        font-size: 0;
-      }
+      font-size: 0;
     }
   }
 
@@ -95,5 +87,16 @@
   ol {
 
     list-style: none;
+  }
+
+  .product-item {
+
+    margin: ($global-margin / 2) 0;
+
+    img {
+
+      float: left;
+      margin-right: $global-margin;
+    }
   }
 }

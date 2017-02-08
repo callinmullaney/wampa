@@ -36,7 +36,7 @@ footer {
 
     li {
       font-size: $global-font-size;
-      margin: 0 0 8px;
+      margin-bottom: $global-margin / 2;
 
       @include breakpoint (small only) {
         padding: $global-padding;
