@@ -17,26 +17,67 @@
 //////////////////
 //button styles - Defines base button styles
 //////////////////
-@mixin button-style($transparent: false) {
+@mixin button-style($outline: false, $reverse: false, $large: false) {
   @include linear-gradient($blue-light, darken($blue-light, 10%), bottom);
 
   &:hover {
     @include linear-gradient(lighten($blue-light, 5%), $blue-light, bottom);
   }
 
-  @if $transparent == true {
-    @include linear-gradient(rgba(smart-scale($primary-color), 0.1), rgba(smart-scale($primary-color), 0.25), bottom);
+  @if $large == true {
+    font-size: rem-calc(15);
+    padding: ($button-padding * 0.75) ($button-padding * 2.25);
+  }
+
+  @if $outline == true {
+    @include linear-gradient(rgba($white, 0.1), rgba($white, 0.5), bottom);
     color: $primary-color;
 
     &:visited,
     &:active,
     &:focus {
-      color: smart-scale($primary-color, $scale: 50%);
+      color: darken($primary-color, 15%);
     }
 
     &:hover {
-      @include linear-gradient(rgba(smart-scale($primary-color, 33%), 0.2), rgba(smart-scale($primary-color, 66%), 0.2), bottom);
-      color: smart-scale($primary-color, $scale: 10%);
+      @include linear-gradient(rgba($white, 0.1), darken($white, 15%), bottom);
+      color: darken($primary-color, 15%);
+    }
+  }
+
+  @if $reverse == true {
+    @include linear-gradient($white, darken($white, 5%), bottom);
+    color: $primary-color;
+    border: 1px solid $white;
+
+    &:visited,
+    &:active,
+    &:focus {
+      color: $primary-color;
+    }
+
+    &:hover {
+      @include linear-gradient($white, darken($white, 15%), bottom);
+      border-color: darken($white, 15%);
+      color: $primary-color;
+    }
+
+    @if $outline == true {
+      @include linear-gradient(rgba($white, 0.1), rgba($white, 0.4), bottom);
+      color: $blue-light;
+      border: 1px solid rgba($white, 0.5);
+
+      &:visited,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+
+      &:hover {
+        @include linear-gradient(rgba($blue-light, 0.1), $blue-light, bottom);
+        border-color: rgba($blue-light, 0.6);
+        color: $white;
+      }
     }
   }
 
