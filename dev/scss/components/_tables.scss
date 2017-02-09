@@ -1,8 +1,11 @@
-//Table styles - used by Magento 2
+//Table styles - used in Magento 2
 table {
 
   border: 1px solid $grey-light;
   text-align: left;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
 
   caption {
 
