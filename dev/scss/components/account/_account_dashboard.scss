@@ -12,4 +12,17 @@
       padding-left: $global-padding;
     }
   }
+
+  .block-content {
+
+    .box {
+
+      margin-bottom: $global-margin;
+
+      p {
+
+        margin-bottom: 0;
+      }
+    }
+  }
 }

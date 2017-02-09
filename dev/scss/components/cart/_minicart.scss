@@ -34,6 +34,8 @@
   //Open cart/shopping cart button
   .showcart {
 
+    outline: none;
+
     @include icon($position: before, $icon-set: 'fa', $icon: shopping-basket) {
       display: inline-block;
       font-size: $global-font-size * 2;
