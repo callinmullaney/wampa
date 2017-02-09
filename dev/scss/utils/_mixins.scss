@@ -13,6 +13,18 @@
   font-size: rem-calc(map-get(map-get($header-sizes, 'small'), $type) * 1px);
 }
 
+//////////////////////
+// Gradient
+//////////////////////
+@mixin linear-gradient($color1, $color2, $direction) {
+  background-color: $color1; /* Old browsers */
+  background: linear-gradient(to $direction, $color1 0%, $color2 100%);
+}
+
+@mixin radial-gradient($center, $edge) {
+  background-color: $edge;
+  background: radial-gradient(ellipse at center, $center 0%, $edge 75%);
+}
 
 //////////////////
 //button styles - Defines base button styles
@@ -82,19 +94,6 @@
   }
 
   @content;
-}
-
-//////////////////////
-// Gradient
-//////////////////////
-@mixin linear-gradient($color1, $color2, $direction) {
-  background-color: $color1; /* Old browsers */
-  background: linear-gradient(to $direction, $color1 0%, $color2 100%);
-}
-
-@mixin radial-gradient($center, $edge) {
-  background-color: $edge;
-  background: radial-gradient(ellipse at center, $center 0%, $edge 75%);
 }
 
 //////////////////////
