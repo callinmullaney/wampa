@@ -13,101 +13,30 @@
   font-size: rem-calc(map-get(map-get($header-sizes, 'small'), $type) * 1px);
 }
 
-//////////////////
-//button base styles
-//////////////////
-@mixin button-base {
-  cursor: pointer;
-  display: inline-block;
-  font-size: rem-calc(8);
-  white-space: nowrap;
-  font-weight: 700;
-  font-family: $body-font-family;
-  line-height: $global-lineheight;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: $blue-light;
-  color: $white;
-  border: 1px solid $blue-light;
-  border-radius: $button-radius;
-  padding: ($button-padding * 0.55) ($button-padding * 1.75);
-  margin: 0;
-  margin-bottom: $global-margin / 2;
-  transition: background-color 200ms, border 200ms, color 200ms;
 
-  &:visited,
-  &:active,
-  &:focus {
-    color: $white;
-  }
+//////////////////
+//button styles - Defines base button styles
+//////////////////
+@mixin button-style($transparent: false) {
+  @include linear-gradient($blue-light, darken($blue-light, 10%), bottom);
 
   &:hover {
-    background-color: darken($primary-color, 15%);
-    border-color: darken($primary-color, 15%);
-    color: $white;
-    text-decoration: none;
-  }
-}
-
-//////////////////
-//button - 4 style combinations
-@mixin button($outline: false, $reverse: false, $large: false) {
-  @include button-base;
-
-  @if $large == true {
-    font-size: rem-calc(15);
-    padding: ($button-padding * 0.75) ($button-padding * 2.25);
+    @include linear-gradient(lighten($blue-light, 5%), $blue-light, bottom);
   }
 
-  @if $outline == true {
-    background-color: transparent;
+  @if $transparent == true {
+    @include linear-gradient(rgba(smart-scale($primary-color), 0.1), rgba(smart-scale($primary-color), 0.25), bottom);
     color: $primary-color;
 
     &:visited,
     &:active,
     &:focus {
-      color: darken($primary-color, 15%);
+      color: smart-scale($primary-color, $scale: 50%);
     }
 
     &:hover {
-      background-color: darken($primary-color, 15%);
-      color: darken($primary-color, 15%);
-    }
-  }
-
-  @if $reverse == true {
-    background-color: $white;
-    color: $primary-color;
-    border: 1px solid $white;
-
-    &:visited,
-    &:active,
-    &:focus {
-      color: $primary-color;
-    }
-
-    &:hover {
-      background-color: darken($white, 15%);
-      border-color: darken($white, 15%);
-      color: $primary-color;
-    }
-
-    @if $outline == true {
-      background-color: transparent;
-      color: $white;
-      border: 1px solid rgba($white, 0.5);
-
-      &:visited,
-      &:active,
-      &:focus {
-        color: $white;
-      }
-
-      &:hover {
-        background-color: $blue-light;
-        border-color: rgba($blue-light, 0.6);
-        color: $white;
-      }
+      @include linear-gradient(rgba(smart-scale($primary-color, 33%), 0.2), rgba(smart-scale($primary-color, 66%), 0.2), bottom);
+      color: smart-scale($primary-color, $scale: 10%);
     }
   }
 

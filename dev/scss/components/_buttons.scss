@@ -2,7 +2,8 @@
 button,
 [type=submit],
 [type=button] {
-  @include button;
+  @extend %button;
+  @include button-style;
 }
 
 //Toolbar links to display inline-block
@@ -19,8 +20,10 @@ button,
 
     a {
 
-      @include button;
+      @extend %button;
+      @include button-style;
       margin: $global-margin 0;
+      padding-top: $global-padding * 0.65;
     }
   }
 }

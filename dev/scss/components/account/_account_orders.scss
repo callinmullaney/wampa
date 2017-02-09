@@ -37,7 +37,8 @@
 
       a {
 
-        @include button;
+        @extend %button;
+        @include button-style;
       }
     }
   }
