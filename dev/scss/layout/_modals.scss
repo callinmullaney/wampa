@@ -10,7 +10,7 @@ body {
 
   &._has-modal-custom {
 
-    .modal-custom {
+    .modal-custom._show {
 
       display: block;
       position: fixed;
@@ -26,11 +26,18 @@ body {
         margin: 0 auto;
         position: relative;
         top: $global-padding * 12;
+        background-color: $white;
+        border-radius: $global-radius;
 
         @include breakpoint(medium) {
 
           width: 50%;
         }
+      }
+
+      .modal-header {
+
+        padding: ($global-padding / 2) $global-padding;
       }
     }
   }
