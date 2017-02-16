@@ -6,7 +6,7 @@
 -->
 <theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
     <title>Wampa</title>
-    <parent>Magento/blank</parent>
+    <parent>Snowdog/blank</parent>
     <media>
         <preview_image>web/images/logo.jpg</preview_image>
     </media>
