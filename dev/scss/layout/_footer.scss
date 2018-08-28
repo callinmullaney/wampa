@@ -28,6 +28,7 @@ footer {
     display: inline-block;
     margin-left: 0;
     vertical-align: top;
+    list-style: none;
 
     @include breakpoint(small only) {
       width: 100%;
@@ -35,11 +36,16 @@ footer {
 
     li {
       font-size: $global-font-size;
-      margin: 0 0 8px;
+      margin-bottom: $global-margin / 2;
 
       @include breakpoint (small only) {
         padding: $global-padding;
         background-color: darken($grey-light, 5%);
+
+        &:hover {
+
+          background-color: darken($grey-light, 15%);
+        }
       }
 
       a {

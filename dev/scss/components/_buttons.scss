@@ -2,5 +2,23 @@
 button,
 [type=submit],
 [type=button] {
-  @include button;
+  @extend %button;
+  @include button-style;
+}
+
+//Toolbar links to display inline-block
+.actions-toolbar {
+
+  .primary,
+  .secondary {
+
+    display: inline-block;
+
+    //Add button styles to primary or secondary links to match buttons of primary links.
+    a {
+
+      @extend %button;
+      @include button-style;
+    }
+  }
 }

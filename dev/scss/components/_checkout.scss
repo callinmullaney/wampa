@@ -1,0 +1,30 @@
+//Checkout Process Page
+.page-layout-checkout {
+
+  .step-title {
+
+    font-weight: 800;
+    margin: $global-margin 0;
+  }
+
+  .shipping-address-items {
+
+    div {
+
+      @include grid-column(12);
+      margin: $global-margin 0;
+      padding: $global-padding;
+
+      @include breakpoint(medium) {
+
+        @include grid-column(6);
+      }
+
+      &.selected-item {
+
+        background-color: $grey-light;
+        border-radius: $global-radius;
+      }
+    }
+  }
+}

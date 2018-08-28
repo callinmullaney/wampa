@@ -3,8 +3,12 @@
   float: right;
   padding-left: 15px;
   position: relative;
-  width: 250px;
+  width: 130px;
   z-index: 4;
+
+  @include breakpoint(medium) {
+    width: 250px;
+  }
 
   .block-title {
     font-size: 0;

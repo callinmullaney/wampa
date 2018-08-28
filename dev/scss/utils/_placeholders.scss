@@ -1,0 +1,32 @@
+////////////////////////////////////////////////////////////////////////////////
+// PLACEHOLDERS
+// -----------------------------------------------------------------------------
+
+/////////////////////
+// Base styles for any button type. @See button-style mixin for further styles.
+// ---------
+
+%button {
+  display: inline-block;
+  border-radius: $global-radius;
+  padding: ($global-padding * 0.65) ($global-padding);
+  line-height: 1;
+  margin-top: $global-margin * 0.5;
+  text-shadow: none;
+  border: 0;
+  color: $white;
+  white-space: nowrap;
+  transition: background-color 300ms, color 300ms, box-shadow 300ms;
+
+  &:visited,
+  &:active,
+  &:focus {
+    color: $white;
+  }
+
+  &:hover {
+    color: smart-scale($primary-color, $scale: 100%);
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

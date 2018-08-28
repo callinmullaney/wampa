@@ -1,0 +1,38 @@
+//Customer Account Addressess
+address {
+
+  font-style: normal;
+}
+
+.customer-address-index {
+
+  address {
+
+    margin-bottom: $global-margin / 2;
+  }
+
+  .block-addresses-list {
+
+    ol {
+
+      list-style: none;
+      margin-left: 0;
+
+      li {
+
+        margin-bottom: $global-margin;
+        padding: $global-padding;
+      }
+
+      li:nth-child(even) {
+
+        background-color: $grey-light;
+      }
+    }
+  }
+
+  [class*="address"] {
+
+    margin-bottom: $global-margin;
+  }
+}

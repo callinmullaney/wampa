@@ -13,104 +13,6 @@
   font-size: rem-calc(map-get(map-get($header-sizes, 'small'), $type) * 1px);
 }
 
-//////////////////
-//button base styles
-//////////////////
-@mixin button-base {
-  display: inline-block;
-  font-size: rem-calc(13);
-  white-space: nowrap;
-  font-weight: 700;
-  font-family: $body-font-family;
-  line-height: $global-lineheight;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: $blue-light;
-  color: $white;
-  border: 1px solid $blue-light;
-  border-radius: $button-radius;
-  padding: ($button-padding * 0.55) ($button-padding * 1.75);
-  margin: 0;
-  transition: background-color 200ms, border 200ms, color 200ms;
-
-  &:visited,
-  &:active,
-  &:focus {
-    color: $white;
-  }
-
-  &:hover {
-    background-color: darken($primary-color, 15%);
-    border-color: darken($primary-color, 15%);
-    color: $white;
-  }
-}
-
-//////////////////
-//button - 4 style combinations
-@mixin button($outline: false, $reverse: false, $large: false) {
-  @include button-base;
-
-  @if $large == true {
-    font-size: rem-calc(15);
-    padding: ($button-padding * 0.75) ($button-padding * 2.25);
-  }
-
-  @if $outline == true {
-    background-color: transparent;
-    color: $primary-color;
-
-    &:visited,
-    &:active,
-    &:focus {
-      color: darken($primary-color, 15%);
-    }
-
-    &:hover {
-      background-color: darken($primary-color, 15%);
-      color: darken($primary-color, 15%);
-    }
-  }
-
-  @if $reverse == true {
-    background-color: $white;
-    color: $primary-color;
-    border: 1px solid $white;
-
-    &:visited,
-    &:active,
-    &:focus {
-      color: $primary-color;
-    }
-
-    &:hover {
-      background-color: darken($white, 15%);
-      border-color: darken($white, 15%);
-      color: $primary-color;
-    }
-
-    @if $outline == true {
-      background-color: transparent;
-      color: $white;
-      border: 1px solid rgba($white, 0.5);
-
-      &:visited,
-      &:active,
-      &:focus {
-        color: $white;
-      }
-
-      &:hover {
-        background-color: $blue-light;
-        border-color: rgba($blue-light, 0.6);
-        color: $white;
-      }
-    }
-  }
-
-  @content;
-}
-
 //////////////////////
 // Gradient
 //////////////////////
@@ -122,6 +24,76 @@
 @mixin radial-gradient($center, $edge) {
   background-color: $edge;
   background: radial-gradient(ellipse at center, $center 0%, $edge 75%);
+}
+
+//////////////////
+//button styles - Defines base button styles
+//////////////////
+@mixin button-style($outline: false, $reverse: false, $large: false) {
+  @include linear-gradient($blue-light, darken($blue-light, 10%), bottom);
+
+  &:hover {
+    @include linear-gradient(lighten($blue-light, 5%), $blue-light, bottom);
+  }
+
+  @if $large == true {
+    font-size: rem-calc(15);
+    padding: ($button-padding * 0.75) ($button-padding * 2.25);
+  }
+
+  @if $outline == true {
+    @include linear-gradient(rgba($white, 0.1), rgba($white, 0.5), bottom);
+    color: $primary-color;
+
+    &:visited,
+    &:active,
+    &:focus {
+      color: darken($primary-color, 15%);
+    }
+
+    &:hover {
+      @include linear-gradient(rgba($white, 0.1), darken($white, 15%), bottom);
+      color: darken($primary-color, 15%);
+    }
+  }
+
+  @if $reverse == true {
+    @include linear-gradient($white, darken($white, 5%), bottom);
+    color: $primary-color;
+    border: 1px solid $white;
+
+    &:visited,
+    &:active,
+    &:focus {
+      color: $primary-color;
+    }
+
+    &:hover {
+      @include linear-gradient($white, darken($white, 15%), bottom);
+      border-color: darken($white, 15%);
+      color: $primary-color;
+    }
+
+    @if $outline == true {
+      @include linear-gradient(rgba($white, 0.1), rgba($white, 0.4), bottom);
+      color: $blue-light;
+      border: 1px solid rgba($white, 0.5);
+
+      &:visited,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+
+      &:hover {
+        @include linear-gradient(rgba($blue-light, 0.1), $blue-light, bottom);
+        border-color: rgba($blue-light, 0.6);
+        color: $white;
+      }
+    }
+  }
+
+  @content;
 }
 
 //////////////////////
@@ -257,7 +229,8 @@ $icons: (
   folder: '\f07b',
   file: '\f15b',
   info: '\f05a',
-  luma-shopping-cart: '\e611',
-  luma-remove: '\e616',
-  luma-menu: '\e609',
+  shopping-cart: '\f07a',
+  shopping-bag: '\f290',
+  shopping-basket: '\f291',
+  print: '\f02f',
 );

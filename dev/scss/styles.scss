@@ -23,6 +23,18 @@
 // project. Got a function? A mixin? Put it in there.
 
 @import 'utils/mixins';
+@import 'utils/placeholders';
+
+
+////////////////////////////////////////////////////////////////////////////////
+// BASE
+// -----------------------------------------------------------------------------
+// The base/ folder holds what we might call the boilerplate stuff for your
+// project. In there, you might find some stuff dealing with typography, and,
+// depending on the project, maybe some other files.
+
+@import 'base/typography';
+@import 'base/status_messages';
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -50,12 +62,24 @@
 // components/ since your site should be mostly composed of tiny modules.
 
 @import 'components/nav';
-@import 'components/typography';
 @import 'components/forms';
 @import 'components/buttons';
 @import 'components/breadcrumbs';
-@import 'components/minicart';
 @import 'components/block_search';
+@import 'components/block_search_autocomplete';
+@import 'components/login';
+@import 'components/tables';
 @import 'components/products/product_grid';
+@import 'components/products/product_list';
 @import 'components/products/product_view';
 @import 'components/products/product_category_view';
+@import 'components/products/product_toolbar';
+@import 'components/products/product_comparison';
+@import 'components/products/product_actions';
+@import 'components/cart/shopping_cart';
+@import 'components/cart/minicart';
+@import 'components/account/account_dashboard';
+@import 'components/account/account_orders';
+@import 'components/account/account_addresses';
+@import 'components/account/account_nav';
+@import 'components/checkout';

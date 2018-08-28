@@ -31,14 +31,25 @@ input,
 input:focus,
 textarea,
 textarea:focus,
-select {
+select,
+select:focus {
 
   background-color: $grey-light;
   border: 1px solid darken($grey-light, 5%);
   border-radius: $global-radius;
   color: $grey;
   line-height: $global-padding;
-  height: $global-padding * 3;
+}
+
+[type=checkbox],
+[type=radio],
+.field [type=checkbox],
+.field [type=radio] {
+
+  display: inline;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
 }
 
 label {

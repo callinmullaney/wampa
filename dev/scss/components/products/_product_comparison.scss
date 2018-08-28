@@ -1,0 +1,17 @@
+//Product comparison table
+.comparison {
+
+  .label {
+
+    color: $grey;
+    border: 0;
+    font-size: $global-font-size;
+    padding-top: 0;
+    display: inline-block;
+  }
+
+  .product-image-container {
+
+    display: block;
+  }
+}

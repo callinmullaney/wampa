@@ -13,5 +13,14 @@
       display: inline-block;
       padding: 0 ($global-padding / 2);
     }
+
+    li:not(:first-child) {
+
+      &::before {
+
+        content: ' / ';
+        margin-left: $global-margin * -1;
+      }
+    }
   }
 }

@@ -22,12 +22,21 @@
       padding-left: $global-padding;
       padding-right: $global-padding;
       padding-top: $global-padding * 2;
+
+      .logo {
+
+        padding-left: $global-padding;
+      }
     }
 }
 
-  .header.panel {
+  .panel.header {
 
-    padding: $global-padding;
+    padding: 0;
+
+    @include breakpoint(medium) {
+      padding: $global-padding;
+    }
 
     > .header.links {
 

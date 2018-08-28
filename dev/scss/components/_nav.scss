@@ -7,7 +7,7 @@
     display: none;
   }
 
-  @include icon($position: before, $icon-set: 'luma-icons', $icon: luma-menu) {
+  @include icon($position: before, $icon-set: 'fa', $icon: menu) {
     font-size: $global-font-size * 2;
     line-height: inherit;
     color: $grey;
@@ -23,38 +23,38 @@
   display: none;
 }
 
-.nav-sections-item-content {
+// .nav-sections-item-content {
 
-  > *,
-  &:not(.open) {
-    @include breakpoint(medium) {
-      display: none;
-    }
-  }
+//   > *,
+//   &:not(.open) {
+//     @include breakpoint(medium) {
+//       display: none;
+//     }
+//   }
 
-  ul {
+//   ul {
 
-    &.open {
-      list-style: none;
-      margin-left: 0;
-      position: relative;
-      z-index: 10;
+//     &.open {
+//       list-style: none;
+//       margin-left: 0;
+//       position: relative;
+//       z-index: 10;
 
-      li {
-        width: 100%;
-        display: block;
-        background-color: $grey-light;
-        padding: $global-padding;
-        border-bottom: 1px solid $grey;
-      }
+//       li {
+//         width: 100%;
+//         display: block;
+//         background-color: $grey-light;
+//         padding: $global-padding;
+//         border-bottom: 1px solid $grey;
+//       }
 
-      a {
-        display: block;
-      }
-    }
+//       a {
+//         display: block;
+//       }
+//     }
 
-    &:not(.open) {
-      display: none;
-    }
-  }
-}
+//     &:not(.open) {
+//       display: none;
+//     }
+//   }
+// }

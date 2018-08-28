@@ -1,0 +1,17 @@
+//Base body font size
+body {
+
+  font-size: 14px;
+}
+
+//Icon fonts - using font awesome.
+@font-face {
+  font-family: 'fa';
+  src: url('../fonts/fa/fonts/fa.eot');
+  src: url('fonts/fa.eot') format('embedded-opentype'),
+    url('../fonts/fa/fonts/fa.ttf') format('truetype'),
+    url('../fonts/fa/fonts/fa.woff') format('woff'),
+    url('../fonts/fa/fonts/fa.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

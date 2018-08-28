@@ -1,0 +1,24 @@
+//Account navigation sidebar
+.account-nav {
+
+  ul {
+
+    list-style: none;
+
+    li {
+
+      display: block;
+
+      a {
+
+        display: block;
+        padding: $global-padding / 2;
+      }
+
+      a:hover {
+
+        background-color: $grey-light;
+      }
+    }
+  }
+}
